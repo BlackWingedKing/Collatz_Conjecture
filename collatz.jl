@@ -33,8 +33,8 @@ function count_collatz(n::Int64)
     end
 end
 
-n = 10000
-x = Int64[]
-seq = collatz(n,x)
-println(count_collatz(n))
-println(size(seq))
+# n = 10000
+# x = Int64[]
+# seq = collatz(n,x)
+# println(count_collatz(n))
+# println(size(seq))

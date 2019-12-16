@@ -1,6 +1,6 @@
 function collatz(n::Int64, arr::Array{Int64,1})
-# this function for a given n > 0 returns the sequence
-# note only for postive integers
+    # this function for a given n > 0 returns the sequence
+    # note only for postive integers
     if (n == 1)
         push!(arr,1)
         return arr
@@ -13,9 +13,12 @@ function collatz(n::Int64, arr::Array{Int64,1})
     end
 end
 
+# dict for memoization
 dict = Dict{Int64, Int64}()
 
 function count_collatz(n::Int64)
+    # this function returns the length of the sequence till 
+    # the appearance of 1
     if (haskey(dict, n))
         return dict[n]
     elseif (n ==1)
